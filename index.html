@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="petDesign/styles.css">
+        <link rel="stylesheet" href="petDesign/buy.css">
+        <title>🐾 PETIFY 🐾</title>
+    </head>
+    <body>
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">PETIFY</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#shop" class="nav__link">Shop</a></li>
+                        <li class="nav__item"><a href="#report" class="nav__link">Report</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__img">    
+                    <img src="images/landing-background.jpg" alt="">
+                </div>
+                <div class="home__data">
+                    <h1 class="home__title">Hi, let's <br> Bring health <br> and happiness to <br> your <span class="home__title-color">pets! 🐾</span></h1>                </div>
+
+               
+            </section>
+            <!--===== SHOP =====-->
+            <section class="Shop section " id="shop">
+                <h2 class="section-title">SHOP</h2>
+                    <div class="shop__container bd-grid">
+                        <div class="food_image">
+                            <img id="orderImage" class="food1Image" src="images/foods/Taste_of_the_wild.jpg" alt="">
+                            <div  id="taste-of-the-wild" style=" align-items: center; padding: 20px;">
+                                <p id="food__title" class="food1Title">TASTE OF THE WILD ANCIENT PRAIRIE</p>
+                                <p id="food__type" class="food1Type"> <b>TYPE:</b> DOGS</p>
+                                <p id="food__price" class="food1Price"><b>PRICE:</b> Php. <span id="price"> 25.00 </span></p>
+                                <a href="#taste-of-the-wild" class="food_buton" id="button1">BUY</a>
+                            </div>
+                        </div>
+                        <div class="food_image">
+                            <img id="orderImage" class="food2Image" src="images/foods/Instinct-rawboost-mixers.jpg" alt="">
+                            <div  id="instinct-of-rawboost" style=" align-items: center; padding: 20px;">
+                                <p id="food__title" class="food2Title">INSTINCT OF RAWBOOST MIXERS</p>
+                                <p id="food__type" class="food2Type"> <b>TYPE:</b> DOGS</p>
+                                <p id="food__price" class="food2Price"><b>PRICE:</b> Php. <span id="price">35.00 </span></p>
+                                <a href="#instinct-of-rawboost" class="food_buton" id="button2">BUY</a>
+                            </div>
+                        </div>
+                        <div class="food_image">
+                            <img id="orderImage" class="food3Image" src="images/foods/PEDIGREE.jpg" alt="">
+                            <div  id="pedigree" style=" align-items: center; padding: 20px;">
+                                <p id="food__title" class="food3Title">PEDIGREE  Mother and Babydog Milk Flavor</p>
+                                <p id="food__type" class="food3Type"> <b>TYPE:</b> DOGS</p>
+                                <p id="food__price" class="food3Price"><b>PRICE:</b> Php. <span id="price">50.00 </span></p>
+                                <a href="#pedigree" class="food_buton" id="button3">BUY</a>
+                            </div>
+                        </div>
+                        <div class="food_image">
+                            <img id="orderImage" class="food4Image" src="images/foods/whiskas.png" alt="">
+                            <div id="whiskas" style=" align-items: center; padding: 20px;">
+                                <p id="food__title" class="food4Title">WHISKAS<br>Dry Cat Food</p>
+                                <p id="food__type" class="food4Type"> <b>TYPE:</b> CATS</p>
+                                <p id="food__price" class="food4Price"><b>PRICE:</b> Php. <span id="price">54.00 </span></p>
+                                <a href="#whiskas" class="food_buton" id="button4">BUY</a>
+                            </div>
+                        </div>
+                    </div>              
+            </section>
+
+            <!--===== REPORT =====-->
+            <section class="report section" id="report">
+                <h2 class="section-title">REPORT</h2>
+                <div class="report__container bd-grid">  
+                    <canvas id="myCustomerVisitChart" style="width:100%; max-width:600px; "height="300px" ></canvas>    
+                    <canvas id="myKiloWeekChart" style="width:100%; max-width:600px" height="300px"></canvas>
+                    <canvas id="myPriceChart" style="width:100%; max-width:600px" height="300px"></canvas>
+                </div> 
+            </section>
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 id="modalName">BUY FOOD</h2>
+                  </div>
+                  <div class="modal-body">
+                    <div class="modal-grid">
+                        <img id="modalImage" src="" alt="">
+                        <h1 id="modalTitle">ddd</h1>
+                        <p id="modalType">ddd</p>
+                        <p id="modalPrice">ddd</p>
+                        KILOGRAM/s: <input type="number" id="myKilo" placeholder="Enter Kilograms">
+                        <br>
+                        <label for="weeks">CHOOSE A WEEKDAY:</label>
+                            <select name="weeks" id="weeks">
+                                <option value="sunday">SUNDAY</option>
+                                <option value="monday">MONDAY</option>
+                                <option value="tuesday">TUESDAY</option>
+                                <option value="wednesday">WEDNESDAY</option>
+                                <option value="thursday">THURSDAY</option>
+                                <option value="friday">FRIDAY</option>
+                                <option value="saturday">SATURDAY</option>
+                            </select>
+                   </div>
+                  </div>
+                  <div class="modal-footer">
+                    <h3 id="modalBuy">BUY</h3>
+                  </div>
+                </div>
+              
+              </div>
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">PETIFY</p>
+            <p>🐱ALLEAH TURBOLENCIA🐶</p>
+        </footer>
+        <script src="script/processOrder.js"></script>
+        <script src="script/scrollreveal.js"></script>
+        <script src="script/main.js"></script>
+        <script src="script/buy.js"></script>
+        <script src="script/chart.js"></script>
+        <script src="script/processReport.js"></script>
+    </body>
+</html>
